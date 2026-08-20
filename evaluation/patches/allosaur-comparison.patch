@@ -1,0 +1,269 @@
+diff --git a/Cargo.toml b/Cargo.toml
+index 0a524aa..766a5cc 100644
+--- a/Cargo.toml
++++ b/Cargo.toml
+@@ -5,7 +5,8 @@ edition = "2018"
+ 
+ [dependencies]
+ bls12_381_plus = "0.5.2"
+-core2 = "0.4"
++# Reproduction-only pin: 0.4.0 is yanked and the repository has no lockfile.
++core2 = { path = "../core2-0.4.0" }
+ digest = "0.9"
+ group = "0.12.1"
+ merlin = "3"
+diff --git a/accumulator/Cargo.toml b/accumulator/Cargo.toml
+index 620eeb5..97a7ba5 100644
+--- a/accumulator/Cargo.toml
++++ b/accumulator/Cargo.toml
+@@ -6,7 +6,7 @@ edition = "2018"
+ 
+ [dependencies]
+ bls12_381_plus = "0.5.2"
+-core2 = "0.4"
++core2 = { path = "../../core2-0.4.0" }
+ digest = "0.9"
+ group = "0.12.1"
+ merlin = "3"
+@@ -22,4 +22,4 @@ zeroize = "1.5"
+ 
+ [dev-dependencies]
+ criterion = "0.4"
+-serde_bare = "0.5"
+\ No newline at end of file
++serde_bare = "0.5"
+diff --git a/allosaur/Cargo.toml b/allosaur/Cargo.toml
+index 30b3705..1ff3560 100644
+--- a/allosaur/Cargo.toml
++++ b/allosaur/Cargo.toml
+@@ -5,7 +5,7 @@ edition = "2018"
+ 
+ [dependencies]
+ bls12_381_plus = "0.5.2"
+-core2 = "0.4"
++core2 = { path = "../../core2-0.4.0" }
+ digest = "0.9"
+ group = "0.12.1"
+ merlin = "3"
+diff --git a/benches/updates.rs b/benches/updates.rs
+index 6be0b50..ff8345a 100644
+--- a/benches/updates.rs
++++ b/benches/updates.rs
+@@ -1,8 +1,5 @@
+-use accumulator::{
+-    SecretKey, Element, Accumulator,MembershipWitness,
+-    PublicKey, Coefficient
+-};
+-use bls12_381_plus::{Scalar,G1Projective, G2Projective};
++use accumulator::{Accumulator, Coefficient, Element, MembershipWitness, PublicKey, SecretKey};
++use bls12_381_plus::{G1Projective, G2Projective, Scalar};
+ use group::GroupEncoding;
+ use rand_core::SeedableRng;
+ use rayon::prelude::*;
+@@ -11,59 +8,45 @@ use std::collections::{HashMap, HashSet};
+ use std::vec::Vec;
+ use uint_zigzag::Uint;
+ 
+-use criterion::{
+-    criterion_group, criterion_main, Criterion,
+-};
+-
+-use allosaur::{
+-    Server,User,PublicKeys,AccParams,UserID
+-};
+-
++use criterion::{criterion_group, criterion_main, Criterion};
+ 
++use allosaur::{AccParams, PublicKeys, Server, User, UserID};
+ 
+ //-------BENCHMARK PARAMETERS ------//
+ 
+-const USERS: usize = 15000; // Total number of elements originally added
++const USERS: usize = 16384; // Comparison workload: N = 2^14
+ const SHARES: usize = 5; // Number of servers for ALLOSAUR
+ const THRESHOLD: usize = 3; // Threshold for ALLOSAUR secret sharing
+ const SLICES: usize = 50; // Size of each "slice" of the optimized single-server update
+-// Size of updates as (number of additions, number of deletions) for
+-// the original batch update protocols
++                          // Size of updates as (number of additions, number of deletions) for
++                          // the original batch update protocols
+ const BATCH_UPDATE_CHANGES: [(usize, usize); 6] = [
+-        (0, 10),
+-        (10, 10),
+-        (0, 100),
+-        (100, 100),
+-        (0, 1000),
+-        (1000, 1000),
+-    ];
++    (0, 10),
++    (10, 10),
++    (0, 100),
++    (100, 100),
++    (0, 1000),
++    (1000, 1000),
++];
+ // Number of deletions for the single-server and threshold updates of ALLOSAUR
+ // Additions are not included, as both cases ignore additions
+-const ALLOSAUR_CHANGES: [usize; 4] = [10, 100, 1000, 10000];
+-const NUM_SAMPLES: usize = 50; // the number of samples for each benchmark
+-//------------------------- ------//
+-
+-
+-
++const ALLOSAUR_CHANGES: [usize; 7] = [10, 30, 100, 300, 1000, 3000, 10000];
++const NUM_SAMPLES: usize = 30; // measured samples in the comparison harness
++                               //------------------------- ------//
+ 
+ criterion_group!(name = benches;
+     config = Criterion::default().sample_size(NUM_SAMPLES);
+-    targets = allosaur_update, single_server, batch_update
++    targets = allosaur_update
+ );
+ criterion_main!(benches);
+ 
+-
+ // Benchmarks the single-server update of Section 3
+ fn single_server(c: &mut Criterion) {
+     c.benchmark_group("single_server");
+ 
+-
+     for num_dels in ALLOSAUR_CHANGES {
+         println!("=================================================");
+-        println!(
+-            "=Single-server Benchmark with {} deletions=",
+-            num_dels
+-        );
++        println!("=Single-server Benchmark with {} deletions=", num_dels);
+         println!("=================================================");
+ 
+         // Creates a random array of users
+@@ -110,7 +93,10 @@ fn single_server(c: &mut Criterion) {
+             };
+             message_length += serde_cbor::to_vec(&server_message).unwrap().len();
+         }
+-        println!("Single-server server->user message size {} bytes", message_length);
++        println!(
++            "Single-server server->user message size {} bytes",
++            message_length
++        );
+ 
+         // User repeatedly processes these deletions
+         c.bench_function("Single-server user-side update", |b| {
+@@ -181,19 +167,21 @@ fn batch_update(c: &mut Criterion) {
+     }
+ }
+ 
+-
+ // Multiparty threshold updates in ALLOSAUR
+ fn allosaur_update(c: &mut Criterion) {
+     c.benchmark_group("allosaur_update");
+ 
+     for num_dels in ALLOSAUR_CHANGES {
+         println!("=================================================");
+-        println!("=ALLOSAUR Benchmark with {} deletions and threshold {} =", num_dels, THRESHOLD);
++        println!(
++            "=ALLOSAUR Benchmark with {} deletions and threshold {} =",
++            num_dels, THRESHOLD
++        );
+         println!("=================================================");
+ 
+         // Creates secrets from shares, somewhat needlessly
+-       let alpha = SecretKey::new(None);
+-        let s =  SecretKey::new(None);
++        let alpha = SecretKey::new(None);
++        let s = SecretKey::new(None);
+         let public_key_alpha = PublicKey(G2Projective::generator() * alpha.0);
+         let public_key_s = PublicKey(G2Projective::generator() * s.0);
+ 
+@@ -254,16 +242,12 @@ fn allosaur_update(c: &mut Criterion) {
+ 
+         // Benchmark the pre-update computations from the user
+         let user = users[num_dels].clone();
+-        c.bench_function(
+-            "ALLOSAUR user-side pre-update",
+-            |b| {
+-                b.iter(|| {
+-                    user
+-                        .pre_update(servers[0].get_epoch(), SHARES, THRESHOLD)
+-                        .unwrap();
+-                })
+-            },
+-        );
++        c.bench_function(&format!("ALLOSAUR user-side pre-update/{num_dels}"), |b| {
++            b.iter(|| {
++                user.pre_update(servers[0].get_epoch(), SHARES, THRESHOLD)
++                    .unwrap();
++            })
++        });
+ 
+         // Compute the actual pre-update data
+         let (user_d, user_shares, user_values) = user
+@@ -278,50 +262,45 @@ fn allosaur_update(c: &mut Criterion) {
+         // Print the length of data sent to *all* servers
+         println!(
+             "ALLOSAUR user 1 user->server message size {} bytes",
+-            serde_cbor::to_vec(&user_server_message).unwrap().len()*SHARES
++            serde_cbor::to_vec(&user_server_message).unwrap().len() * SHARES
+         );
+ 
+         // Benchmark the server side, for only one server
+-        c.bench_function(
+-            "ALLOSAUR server-side update ",
+-            |b| b.iter(|| servers[0].update(user_d, &user_shares[0])),
+-        );
++        c.bench_function(&format!("ALLOSAUR server-side update/{num_dels}"), |b| {
++            b.iter(|| servers[0].update(user_d, &user_shares[0]))
++        });
+ 
+         // Actually get the server responses, from all servers
+         let dvs: Vec<(Vec<Scalar>, Vec<G1Projective>)> = (0..SHARES)
+             .map(|i| servers[i].update(user_d, &user_shares[i]))
+             .collect();
+ 
+-        // Get the length of data sent back to the user 
++        // Get the length of data sent back to the user
+         let server_user_message = ServerUpdateMessage {
+             d_poly: dvs[0].0.clone(),
+             v_poly: dvs[0].1.clone(),
+         };
+-         // Print the length of data sent from *all* servers
+-        println!(
+-            "ALLOSAUR user 1 server->user message size {} bytes",
+-            serde_cbor::to_vec(&server_user_message).unwrap().len()*SHARES
+-        );
++        // Print the length of data sent from *all* servers
++        let upload_bytes = serde_cbor::to_vec(&user_server_message).unwrap().len() * SHARES;
++        let download_bytes = serde_cbor::to_vec(&server_user_message).unwrap().len() * SHARES;
++        println!("COMPARISON_CSV,{num_dels},{upload_bytes},{download_bytes}");
+ 
+         // Benchmark the user's computation on the resulting data
+-        c.bench_function("user-side post-update ", |b| {
++        c.bench_function(&format!("user-side post-update/{num_dels}"), |b| {
+             b.iter(|| {
+-                user
+-                    .post_update(
+-                        user.witness.as_ref().unwrap().witness,
+-                        THRESHOLD,
+-                        &user_shares,
+-                        &user_values,
+-                        &dvs,
+-                    )
+-                    .unwrap();
++                user.post_update(
++                    user.witness.as_ref().unwrap().witness,
++                    THRESHOLD,
++                    &user_shares,
++                    &user_values,
++                    &dvs,
++                )
++                .unwrap();
+             })
+         });
+-
+     }
+ }
+ 
+-
+ // Various helper data structures to serialize update messages into byte strings
+ 
+ #[derive(Debug)]

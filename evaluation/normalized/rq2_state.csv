@@ -1,0 +1,451 @@
+scheme,capacity,rate,revoked,distribution,workload_seed,cover_nodes,public_state_bytes,authority_refresh_ms,verified,measurement,state_semantics,token_bytes
+HiddenCover,1048576,0.001,1049,clustered,0.0,21.0,784,0.0969,True,0,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.001,1049,clustered,1.0,19.0,720,0.0893,True,1,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.001,1049,clustered,2.0,17.0,656,0.1256,True,2,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.001,1049,clustered,3.0,19.0,720,0.0866,True,3,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.001,1049,clustered,4.0,21.0,784,0.085,True,4,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.001,1049,clustered,5.0,18.0,688,0.128,True,5,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.001,1049,clustered,6.0,21.0,784,0.0873999999999999,True,6,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.001,1049,clustered,7.0,23.0,848,0.0969,True,7,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.001,1049,clustered,8.0,21.0,784,0.1382,True,8,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.001,1049,clustered,9.0,19.0,720,0.0993,True,9,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.001,1049,clustered,10.0,20.0,752,0.0905,True,10,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.001,1049,clustered,11.0,19.0,720,0.0871,True,11,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.001,1049,clustered,12.0,18.0,688,0.0894,True,12,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.001,1049,clustered,13.0,21.0,784,0.0975,True,13,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.001,1049,clustered,14.0,19.0,720,0.0992,True,14,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.001,1049,clustered,15.0,17.0,656,0.119,True,15,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.001,1049,clustered,16.0,20.0,752,0.1004,True,16,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.001,1049,clustered,17.0,20.0,752,0.0937,True,17,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.001,1049,clustered,18.0,20.0,752,0.0914,True,18,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.001,1049,clustered,19.0,20.0,752,0.0945,True,19,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.001,1049,random,0.0,9620.0,307952,8.0668,True,0,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.001,1049,random,1.0,9511.0,304464,7.8843,True,1,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.001,1049,random,2.0,9514.0,304560,8.0088,True,2,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.001,1049,random,3.0,9446.0,302384,7.913200000000001,True,3,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.001,1049,random,4.0,9509.0,304400,8.5538,True,4,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.001,1049,random,5.0,9510.0,304432,7.9877,True,5,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.001,1049,random,6.0,9585.0,306832,8.8842,True,6,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.001,1049,random,7.0,9494.0,303920,9.5607,True,7,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.001,1049,random,8.0,9492.0,303856,8.774600000000001,True,8,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.001,1049,random,9.0,9600.0,307312,8.2683,True,9,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.001,1049,random,10.0,9598.0,307248,8.1799,True,10,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.001,1049,random,11.0,9510.0,304432,7.744400000000001,True,11,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.001,1049,random,12.0,9452.0,302576,7.8614,True,12,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.001,1049,random,13.0,9521.0,304784,7.9048,True,13,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.001,1049,random,14.0,9576.0,306544,8.0012,True,14,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.001,1049,random,15.0,9480.0,303472,8.009799999999998,True,15,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.001,1049,random,16.0,9458.0,302768,8.848099999999999,True,16,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.001,1049,random,17.0,9486.0,303664,9.7174,True,17,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.001,1049,random,18.0,9522.0,304816,9.6594,True,18,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.001,1049,random,19.0,9432.0,301936,9.7274,True,19,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.001,1049,dispersed,0.0,10440.0,334192,10.1147,True,0,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.001,1049,dispersed,1.0,10440.0,334192,10.2646,True,1,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.001,1049,dispersed,2.0,10440.0,334192,9.6773,True,2,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.001,1049,dispersed,3.0,10440.0,334192,9.6885,True,3,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.001,1049,dispersed,4.0,10440.0,334192,9.9437,True,4,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.001,1049,dispersed,5.0,10440.0,334192,9.855300000000002,True,5,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.001,1049,dispersed,6.0,10440.0,334192,10.2317,True,6,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.001,1049,dispersed,7.0,10440.0,334192,10.5115,True,7,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.001,1049,dispersed,8.0,10440.0,334192,10.1352,True,8,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.001,1049,dispersed,9.0,10440.0,334192,9.6078,True,9,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.001,1049,dispersed,10.0,10440.0,334192,9.6946,True,10,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.001,1049,dispersed,11.0,10440.0,334192,10.0271,True,11,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.001,1049,dispersed,12.0,10440.0,334192,9.4549,True,12,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.001,1049,dispersed,13.0,10440.0,334192,10.1752,True,13,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.001,1049,dispersed,14.0,10440.0,334192,12.5445,True,14,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.001,1049,dispersed,15.0,10440.0,334192,9.2674,True,15,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.001,1049,dispersed,16.0,10440.0,334192,10.8767,True,16,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.001,1049,dispersed,17.0,10440.0,334192,9.1349,True,17,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.001,1049,dispersed,18.0,10440.0,334192,9.0397,True,18,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.001,1049,dispersed,19.0,10440.0,334192,9.4956,True,19,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.01,10486,clustered,0.0,19.0,720,0.4255,True,0,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.01,10486,clustered,1.0,19.0,720,0.3777,True,1,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.01,10486,clustered,2.0,24.0,880,0.4063,True,2,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.01,10486,clustered,3.0,20.0,752,0.4623,True,3,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.01,10486,clustered,4.0,16.0,624,0.4061,True,4,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.01,10486,clustered,5.0,21.0,784,0.4063,True,5,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.01,10486,clustered,6.0,16.0,624,0.5963999999999999,True,6,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.01,10486,clustered,7.0,19.0,720,0.4057,True,7,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.01,10486,clustered,8.0,22.0,816,0.4034999999999999,True,8,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.01,10486,clustered,9.0,16.0,624,0.4034999999999999,True,9,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.01,10486,clustered,10.0,23.0,848,0.4221,True,10,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.01,10486,clustered,11.0,20.0,752,0.4037,True,11,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.01,10486,clustered,12.0,23.0,848,0.406,True,12,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.01,10486,clustered,13.0,18.0,688,0.4395,True,13,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.01,10486,clustered,14.0,21.0,784,0.416,True,14,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.01,10486,clustered,15.0,19.0,720,0.4027,True,15,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.01,10486,clustered,16.0,21.0,784,0.4308,True,16,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.01,10486,clustered,17.0,23.0,848,0.4022,True,17,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.01,10486,clustered,18.0,25.0,912,0.4054,True,18,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.01,10486,clustered,19.0,21.0,784,0.719,True,19,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.01,10486,random,0.0,60768.0,1944688,40.9286,True,0,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.01,10486,random,1.0,60723.0,1943248,41.3306,True,1,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.01,10486,random,2.0,60849.0,1947280,53.4863,True,2,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.01,10486,random,3.0,60780.0,1945072,41.659,True,3,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.01,10486,random,4.0,60797.0,1945616,47.555,True,4,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.01,10486,random,5.0,60807.0,1945936,40.2518,True,5,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.01,10486,random,6.0,60624.0,1940080,40.7332,True,6,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.01,10486,random,7.0,60705.0,1942672,43.8677,True,7,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.01,10486,random,8.0,60737.0,1943696,48.5174,True,8,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.01,10486,random,9.0,60574.0,1938480,46.3015,True,9,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.01,10486,random,10.0,60900.0,1948912,44.5377,True,10,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.01,10486,random,11.0,60744.0,1943920,43.4639,True,11,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.01,10486,random,12.0,60829.0,1946640,41.8227,True,12,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.01,10486,random,13.0,60887.0,1948496,39.735600000000005,True,13,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.01,10486,random,14.0,60801.0,1945744,40.6134,True,14,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.01,10486,random,15.0,60775.0,1944912,48.7693,True,15,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.01,10486,random,16.0,60648.0,1940848,41.5411,True,16,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.01,10486,random,17.0,60691.0,1942224,45.9276,True,17,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.01,10486,random,18.0,60635.0,1940432,44.878,True,18,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.01,10486,random,19.0,60733.0,1943568,46.6734,True,19,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.01,10486,dispersed,0.0,68814.0,2202160,47.8508,True,0,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.01,10486,dispersed,1.0,68814.0,2202160,44.2012,True,1,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.01,10486,dispersed,2.0,68814.0,2202160,44.2532,True,2,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.01,10486,dispersed,3.0,68814.0,2202160,48.8155,True,3,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.01,10486,dispersed,4.0,68814.0,2202160,48.0908,True,4,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.01,10486,dispersed,5.0,68814.0,2202160,45.3806,True,5,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.01,10486,dispersed,6.0,68814.0,2202160,43.2656,True,6,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.01,10486,dispersed,7.0,68814.0,2202160,45.3481,True,7,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.01,10486,dispersed,8.0,68814.0,2202160,50.1273,True,8,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.01,10486,dispersed,9.0,68814.0,2202160,45.9136,True,9,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.01,10486,dispersed,10.0,68814.0,2202160,61.7368,True,10,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.01,10486,dispersed,11.0,68814.0,2202160,48.747600000000006,True,11,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.01,10486,dispersed,12.0,68814.0,2202160,44.9145,True,12,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.01,10486,dispersed,13.0,68814.0,2202160,46.09739999999999,True,13,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.01,10486,dispersed,14.0,68814.0,2202160,47.1739,True,14,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.01,10486,dispersed,15.0,68814.0,2202160,44.2934,True,15,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.01,10486,dispersed,16.0,68814.0,2202160,46.912,True,16,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.01,10486,dispersed,17.0,68814.0,2202160,45.7324,True,17,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.01,10486,dispersed,18.0,68814.0,2202160,45.1936,True,18,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.01,10486,dispersed,19.0,68814.0,2202160,45.2011,True,19,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.05,52429,clustered,0.0,20.0,752,3.7116,True,0,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.05,52429,clustered,1.0,15.0,592,1.8535,True,1,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.05,52429,clustered,2.0,23.0,848,2.5846,True,2,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.05,52429,clustered,3.0,23.0,848,1.8563,True,3,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.05,52429,clustered,4.0,20.0,752,1.843,True,4,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.05,52429,clustered,5.0,20.0,752,1.8995,True,5,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.05,52429,clustered,6.0,17.0,656,1.7411,True,6,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.05,52429,clustered,7.0,19.0,720,2.4302,True,7,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.05,52429,clustered,8.0,20.0,752,1.7796999999999998,True,8,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.05,52429,clustered,9.0,24.0,880,1.782,True,9,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.05,52429,clustered,10.0,19.0,720,1.9424,True,10,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.05,52429,clustered,11.0,19.0,720,1.7488,True,11,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.05,52429,clustered,12.0,21.0,784,2.3072,True,12,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.05,52429,clustered,13.0,22.0,816,1.7586,True,13,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.05,52429,clustered,14.0,15.0,592,1.7906,True,14,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.05,52429,clustered,15.0,20.0,752,1.8537,True,15,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.05,52429,clustered,16.0,24.0,880,1.7379,True,16,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.05,52429,clustered,17.0,25.0,912,1.8294,True,17,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.05,52429,clustered,18.0,18.0,688,1.7843,True,18,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.05,52429,clustered,19.0,25.0,912,2.0816,True,19,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.05,52429,random,0.0,186686.0,5974064,117.8155,True,0,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.05,52429,random,1.0,186940.0,5982192,135.3047,True,1,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.05,52429,random,2.0,186305.0,5961872,130.61159999999998,True,2,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.05,52429,random,3.0,186989.0,5983760,118.7831,True,3,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.05,52429,random,4.0,186773.0,5976848,119.696,True,4,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.05,52429,random,5.0,186530.0,5969072,128.2592,True,5,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.05,52429,random,6.0,186627.0,5972176,135.5984,True,6,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.05,52429,random,7.0,186525.0,5968912,117.0267,True,7,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.05,52429,random,8.0,186414.0,5965360,115.1049,True,8,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.05,52429,random,9.0,186316.0,5962224,115.6214,True,9,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.05,52429,random,10.0,186376.0,5964144,121.0472,True,10,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.05,52429,random,11.0,186624.0,5972080,125.9052,True,11,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.05,52429,random,12.0,186648.0,5972848,121.9702,True,12,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.05,52429,random,13.0,186553.0,5969808,124.2779,True,13,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.05,52429,random,14.0,187088.0,5986928,117.6078,True,14,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.05,52429,random,15.0,186694.0,5974320,123.4453,True,15,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.05,52429,random,16.0,186571.0,5970384,161.95940000000002,True,16,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.05,52429,random,17.0,186727.0,5975376,142.9706,True,17,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.05,52429,random,18.0,186775.0,5976912,125.0397,True,18,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.05,52429,random,19.0,186971.0,5983184,127.7479,True,19,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.05,52429,dispersed,0.0,222823.0,7130448,159.2373,True,0,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.05,52429,dispersed,1.0,222823.0,7130448,134.69310000000002,True,1,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.05,52429,dispersed,2.0,222823.0,7130448,133.52100000000002,True,2,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.05,52429,dispersed,3.0,222823.0,7130448,133.0745,True,3,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.05,52429,dispersed,4.0,222823.0,7130448,135.7057,True,4,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.05,52429,dispersed,5.0,222823.0,7130448,141.97969999999998,True,5,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.05,52429,dispersed,6.0,222823.0,7130448,137.0174,True,6,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.05,52429,dispersed,7.0,222823.0,7130448,135.07469999999998,True,7,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.05,52429,dispersed,8.0,222823.0,7130448,140.1344,True,8,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.05,52429,dispersed,9.0,222823.0,7130448,135.8304,True,9,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.05,52429,dispersed,10.0,222823.0,7130448,138.0718,True,10,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.05,52429,dispersed,11.0,222823.0,7130448,146.2436,True,11,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.05,52429,dispersed,12.0,222823.0,7130448,142.1011,True,12,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.05,52429,dispersed,13.0,222823.0,7130448,172.4955,True,13,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.05,52429,dispersed,14.0,222823.0,7130448,136.04459999999995,True,14,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.05,52429,dispersed,15.0,222823.0,7130448,148.2377,True,15,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.05,52429,dispersed,16.0,222823.0,7130448,153.306,True,16,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.05,52429,dispersed,17.0,222823.0,7130448,142.5204,True,17,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.05,52429,dispersed,18.0,222823.0,7130448,139.9696,True,18,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.05,52429,dispersed,19.0,222823.0,7130448,137.55100000000002,True,19,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.1,104858,clustered,0.0,20.0,752,4.731800000000001,True,0,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.1,104858,clustered,1.0,14.0,560,4.053,True,1,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.1,104858,clustered,2.0,29.0,1040,5.440300000000001,True,2,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.1,104858,clustered,3.0,23.0,848,4.4786,True,3,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.1,104858,clustered,4.0,23.0,848,4.8829,True,4,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.1,104858,clustered,5.0,20.0,752,5.5991,True,5,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.1,104858,clustered,6.0,27.0,976,5.9054,True,6,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.1,104858,clustered,7.0,22.0,816,6.0484,True,7,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.1,104858,clustered,8.0,18.0,688,3.9964,True,8,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.1,104858,clustered,9.0,20.0,752,4.5062,True,9,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.1,104858,clustered,10.0,16.0,624,4.9521,True,10,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.1,104858,clustered,11.0,22.0,816,4.2836,True,11,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.1,104858,clustered,12.0,14.0,560,4.890000000000001,True,12,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.1,104858,clustered,13.0,19.0,720,4.1553,True,13,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.1,104858,clustered,14.0,16.0,624,4.536499999999999,True,14,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.1,104858,clustered,15.0,20.0,752,4.247800000000001,True,15,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.1,104858,clustered,16.0,21.0,784,4.3381,True,16,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.1,104858,clustered,17.0,20.0,752,4.8481000000000005,True,17,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.1,104858,clustered,18.0,18.0,688,4.160900000000001,True,18,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.1,104858,clustered,19.0,26.0,944,4.896,True,19,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.1,104858,random,0.0,277264.0,8872560,178.47979999999998,True,0,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.1,104858,random,1.0,277667.0,8885456,184.7211,True,1,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.1,104858,random,2.0,277067.0,8866256,189.8382,True,2,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.1,104858,random,3.0,277083.0,8866768,172.4123,True,3,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.1,104858,random,4.0,277156.0,8869104,180.4003,True,4,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.1,104858,random,5.0,278117.0,8899856,187.1017,True,5,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.1,104858,random,6.0,276965.0,8862992,185.9079,True,6,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.1,104858,random,7.0,277415.0,8877392,198.9168,True,7,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.1,104858,random,8.0,277455.0,8878672,174.34359999999998,True,8,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.1,104858,random,9.0,277646.0,8884784,179.1036,True,9,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.1,104858,random,10.0,277322.0,8874416,179.3687,True,10,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.1,104858,random,11.0,277473.0,8879248,177.56040000000002,True,11,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.1,104858,random,12.0,276930.0,8861872,180.764,True,12,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.1,104858,random,13.0,277144.0,8868720,177.6275,True,13,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.1,104858,random,14.0,277062.0,8866096,183.6667,True,14,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.1,104858,random,15.0,276899.0,8860880,181.1062,True,15,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.1,104858,random,16.0,277151.0,8868944,181.4582,True,16,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.1,104858,random,17.0,276975.0,8863312,184.5275,True,17,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.1,104858,random,18.0,277055.0,8865872,185.257,True,18,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.1,104858,random,19.0,277647.0,8884816,175.0334,True,19,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.1,104858,dispersed,0.0,340788.0,10905328,212.002,True,0,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.1,104858,dispersed,1.0,340788.0,10905328,215.5311,True,1,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.1,104858,dispersed,2.0,340788.0,10905328,209.37,True,2,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.1,104858,dispersed,3.0,340788.0,10905328,217.8345,True,3,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.1,104858,dispersed,4.0,340788.0,10905328,211.7659,True,4,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.1,104858,dispersed,5.0,340788.0,10905328,211.006,True,5,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.1,104858,dispersed,6.0,340788.0,10905328,212.009,True,6,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.1,104858,dispersed,7.0,340788.0,10905328,217.3419,True,7,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.1,104858,dispersed,8.0,340788.0,10905328,206.1799,True,8,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.1,104858,dispersed,9.0,340788.0,10905328,203.1941,True,9,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.1,104858,dispersed,10.0,340788.0,10905328,207.1706,True,10,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.1,104858,dispersed,11.0,340788.0,10905328,210.1851,True,11,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.1,104858,dispersed,12.0,340788.0,10905328,206.9979,True,12,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.1,104858,dispersed,13.0,340788.0,10905328,206.5831,True,13,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.1,104858,dispersed,14.0,340788.0,10905328,208.3521,True,14,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.1,104858,dispersed,15.0,340788.0,10905328,205.6016,True,15,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.1,104858,dispersed,16.0,340788.0,10905328,206.4401,True,16,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.1,104858,dispersed,17.0,340788.0,10905328,208.3522,True,17,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.1,104858,dispersed,18.0,340788.0,10905328,207.7362,True,18,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.1,104858,dispersed,19.0,340788.0,10905328,205.2159,True,19,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.15,157286,clustered,0.0,18.0,688,7.7212,True,0,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.15,157286,clustered,1.0,18.0,688,7.4504,True,1,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.15,157286,clustered,2.0,29.0,1040,7.6145,True,2,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.15,157286,clustered,3.0,27.0,976,7.700399999999999,True,3,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.15,157286,clustered,4.0,19.0,720,9.203,True,4,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.15,157286,clustered,5.0,17.0,656,7.015000000000001,True,5,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.15,157286,clustered,6.0,19.0,720,7.15,True,6,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.15,157286,clustered,7.0,18.0,688,7.2556,True,7,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.15,157286,clustered,8.0,14.0,560,8.3338,True,8,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.15,157286,clustered,9.0,17.0,656,7.787299999999999,True,9,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.15,157286,clustered,10.0,19.0,720,7.1446000000000005,True,10,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.15,157286,clustered,11.0,17.0,656,6.9887,True,11,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.15,157286,clustered,12.0,20.0,752,8.952699999999998,True,12,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.15,157286,clustered,13.0,23.0,848,8.5174,True,13,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.15,157286,clustered,14.0,24.0,880,7.297599999999999,True,14,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.15,157286,clustered,15.0,21.0,784,7.0227,True,15,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.15,157286,clustered,16.0,21.0,784,6.874199999999999,True,16,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.15,157286,clustered,17.0,20.0,752,8.9538,True,17,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.15,157286,clustered,18.0,14.0,560,8.288,True,18,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.15,157286,clustered,19.0,18.0,688,6.354699999999999,True,19,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.15,157286,random,0.0,335055.0,10721872,211.8914,True,0,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.15,157286,random,1.0,334861.0,10715664,202.7298,True,1,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.15,157286,random,2.0,334511.0,10704464,214.2325,True,2,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.15,157286,random,3.0,334523.0,10704848,210.2589,True,3,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.15,157286,random,4.0,334910.0,10717232,215.9274,True,4,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.15,157286,random,5.0,335073.0,10722448,211.8075,True,5,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.15,157286,random,6.0,334598.0,10707248,205.8264,True,6,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.15,157286,random,7.0,334613.0,10707728,213.6132,True,7,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.15,157286,random,8.0,334781.0,10713104,222.2057,True,8,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.15,157286,random,9.0,334934.0,10718000,229.3581,True,9,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.15,157286,random,10.0,335149.0,10724880,213.349,True,10,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.15,157286,random,11.0,334815.0,10714192,218.3644,True,11,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.15,157286,random,12.0,334817.0,10714256,215.4381,True,12,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.15,157286,random,13.0,335261.0,10728464,222.6566,True,13,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.15,157286,random,14.0,335204.0,10726640,226.1085,True,14,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.15,157286,random,15.0,334858.0,10715568,232.0513,True,15,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.15,157286,random,16.0,335160.0,10725232,238.5258,True,16,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.15,157286,random,17.0,334851.0,10715344,214.5316,True,17,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.15,157286,random,18.0,334706.0,10710704,211.6809,True,18,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.15,157286,random,19.0,335158.0,10725168,216.629,True,19,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.15,157286,dispersed,0.0,419430.0,13421872,262.2808,True,0,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.15,157286,dispersed,1.0,419430.0,13421872,267.6959,True,1,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.15,157286,dispersed,2.0,419430.0,13421872,251.60870000000003,True,2,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.15,157286,dispersed,3.0,419430.0,13421872,245.6892,True,3,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.15,157286,dispersed,4.0,419430.0,13421872,270.5758,True,4,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.15,157286,dispersed,5.0,419430.0,13421872,265.1834,True,5,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.15,157286,dispersed,6.0,419430.0,13421872,274.1678,True,6,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.15,157286,dispersed,7.0,419430.0,13421872,275.8479,True,7,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.15,157286,dispersed,8.0,419430.0,13421872,272.1848,True,8,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.15,157286,dispersed,9.0,419430.0,13421872,265.2322,True,9,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.15,157286,dispersed,10.0,419430.0,13421872,277.7869,True,10,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.15,157286,dispersed,11.0,419430.0,13421872,270.4723,True,11,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.15,157286,dispersed,12.0,419430.0,13421872,257.8976,True,12,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.15,157286,dispersed,13.0,419430.0,13421872,267.38820000000004,True,13,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.15,157286,dispersed,14.0,419430.0,13421872,258.3435,True,14,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.15,157286,dispersed,15.0,419430.0,13421872,262.68940000000003,True,15,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.15,157286,dispersed,16.0,419430.0,13421872,262.6372,True,16,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.15,157286,dispersed,17.0,419430.0,13421872,256.0274,True,17,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.15,157286,dispersed,18.0,419430.0,13421872,272.7891,True,18,authenticated Complete-Subtree Cover,
+HiddenCover,1048576,0.15,157286,dispersed,19.0,419430.0,13421872,272.9535,True,19,authenticated Complete-Subtree Cover,
+zkRevoke,1000000,0.001,1000,not_applicable,,,32016,14.1888,True,0,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.001,1000,not_applicable,,,32016,15.5743,True,1,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.001,1000,not_applicable,,,32016,13.5021,True,2,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.001,1000,not_applicable,,,32016,14.5224,True,3,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.001,1000,not_applicable,,,32016,16.0203,True,4,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.001,1000,not_applicable,,,32016,13.3232,True,5,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.001,1000,not_applicable,,,32016,14.1384,True,6,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.001,1000,not_applicable,,,32016,14.4318,True,7,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.001,1000,not_applicable,,,32016,13.4906,True,8,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.001,1000,not_applicable,,,32016,14.0281,True,9,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.001,1000,not_applicable,,,32016,14.5322,True,10,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.001,1000,not_applicable,,,32016,17.2223,True,11,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.001,1000,not_applicable,,,32016,15.0476,True,12,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.001,1000,not_applicable,,,32016,15.4418,True,13,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.001,1000,not_applicable,,,32016,14.7923,True,14,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.001,1000,not_applicable,,,32016,13.52,True,15,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.001,1000,not_applicable,,,32016,12.538,True,16,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.001,1000,not_applicable,,,32016,13.0203,True,17,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.001,1000,not_applicable,,,32016,13.5327,True,18,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.001,1000,not_applicable,,,32016,17.5528,True,19,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.001,1000,not_applicable,,,32016,16.1108,True,20,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.001,1000,not_applicable,,,32016,15.0056,True,21,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.001,1000,not_applicable,,,32016,14.2328,True,22,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.001,1000,not_applicable,,,32016,16.1951,True,23,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.001,1000,not_applicable,,,32016,14.347,True,24,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.001,1000,not_applicable,,,32016,15.5578,True,25,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.001,1000,not_applicable,,,32016,16.1196,True,26,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.001,1000,not_applicable,,,32016,17.1195,True,27,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.001,1000,not_applicable,,,32016,12.4495,True,28,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.001,1000,not_applicable,,,32016,14.0033,True,29,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.01,10000,not_applicable,,,320016,144.2385,True,0,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.01,10000,not_applicable,,,320016,154.8782,True,1,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.01,10000,not_applicable,,,320016,148.3682,True,2,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.01,10000,not_applicable,,,320016,143.5788,True,3,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.01,10000,not_applicable,,,320016,153.5136,True,4,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.01,10000,not_applicable,,,320016,148.2747,True,5,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.01,10000,not_applicable,,,320016,153.2863,True,6,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.01,10000,not_applicable,,,320016,153.0079,True,7,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.01,10000,not_applicable,,,320016,176.8791,True,8,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.01,10000,not_applicable,,,320016,147.1807,True,9,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.01,10000,not_applicable,,,320016,149.6033,True,10,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.01,10000,not_applicable,,,320016,141.714,True,11,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.01,10000,not_applicable,,,320016,146.0513,True,12,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.01,10000,not_applicable,,,320016,146.5647,True,13,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.01,10000,not_applicable,,,320016,150.3538,True,14,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.01,10000,not_applicable,,,320016,154.0157,True,15,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.01,10000,not_applicable,,,320016,147.0261,True,16,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.01,10000,not_applicable,,,320016,139.0232,True,17,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.01,10000,not_applicable,,,320016,145.751,True,18,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.01,10000,not_applicable,,,320016,151.2319,True,19,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.01,10000,not_applicable,,,320016,146.4332,True,20,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.01,10000,not_applicable,,,320016,143.1784,True,21,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.01,10000,not_applicable,,,320016,150.7923,True,22,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.01,10000,not_applicable,,,320016,147.6184,True,23,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.01,10000,not_applicable,,,320016,150.9244,True,24,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.01,10000,not_applicable,,,320016,148.8281,True,25,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.01,10000,not_applicable,,,320016,149.3671,True,26,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.01,10000,not_applicable,,,320016,147.5561,True,27,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.01,10000,not_applicable,,,320016,162.0252,True,28,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.01,10000,not_applicable,,,320016,149.2553,True,29,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.05,50000,not_applicable,,,1600016,756.4203,True,0,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.05,50000,not_applicable,,,1600016,731.6952,True,1,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.05,50000,not_applicable,,,1600016,750.2389,True,2,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.05,50000,not_applicable,,,1600016,749.1138,True,3,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.05,50000,not_applicable,,,1600016,781.7923,True,4,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.05,50000,not_applicable,,,1600016,750.7992,True,5,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.05,50000,not_applicable,,,1600016,748.6554,True,6,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.05,50000,not_applicable,,,1600016,736.4309,True,7,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.05,50000,not_applicable,,,1600016,758.1166,True,8,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.05,50000,not_applicable,,,1600016,743.7259,True,9,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.05,50000,not_applicable,,,1600016,734.4363,True,10,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.05,50000,not_applicable,,,1600016,742.525,True,11,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.05,50000,not_applicable,,,1600016,740.9067,True,12,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.05,50000,not_applicable,,,1600016,744.3781,True,13,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.05,50000,not_applicable,,,1600016,746.2605,True,14,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.05,50000,not_applicable,,,1600016,735.6489,True,15,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.05,50000,not_applicable,,,1600016,734.5332,True,16,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.05,50000,not_applicable,,,1600016,717.4381,True,17,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.05,50000,not_applicable,,,1600016,721.5378,True,18,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.05,50000,not_applicable,,,1600016,746.0992,True,19,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.05,50000,not_applicable,,,1600016,750.4927,True,20,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.05,50000,not_applicable,,,1600016,758.0981,True,21,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.05,50000,not_applicable,,,1600016,725.4319,True,22,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.05,50000,not_applicable,,,1600016,738.6757,True,23,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.05,50000,not_applicable,,,1600016,733.0561,True,24,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.05,50000,not_applicable,,,1600016,746.3616,True,25,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.05,50000,not_applicable,,,1600016,744.2182,True,26,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.05,50000,not_applicable,,,1600016,738.8995,True,27,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.05,50000,not_applicable,,,1600016,723.9954,True,28,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.05,50000,not_applicable,,,1600016,743.0111,True,29,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.1,100000,not_applicable,,,3200016,1449.1917,True,0,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.1,100000,not_applicable,,,3200016,1439.3783,True,1,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.1,100000,not_applicable,,,3200016,1437.391,True,2,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.1,100000,not_applicable,,,3200016,1483.5769,True,3,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.1,100000,not_applicable,,,3200016,1450.0226,True,4,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.1,100000,not_applicable,,,3200016,1441.3817,True,5,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.1,100000,not_applicable,,,3200016,1403.7575,True,6,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.1,100000,not_applicable,,,3200016,1450.6905,True,7,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.1,100000,not_applicable,,,3200016,1487.1325,True,8,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.1,100000,not_applicable,,,3200016,1449.4833,True,9,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.1,100000,not_applicable,,,3200016,1435.725,True,10,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.1,100000,not_applicable,,,3200016,1448.9463,True,11,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.1,100000,not_applicable,,,3200016,1431.2693,True,12,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.1,100000,not_applicable,,,3200016,1423.7382,True,13,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.1,100000,not_applicable,,,3200016,1430.1974,True,14,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.1,100000,not_applicable,,,3200016,1427.278,True,15,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.1,100000,not_applicable,,,3200016,1438.6735,True,16,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.1,100000,not_applicable,,,3200016,1440.9791,True,17,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.1,100000,not_applicable,,,3200016,1427.3902,True,18,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.1,100000,not_applicable,,,3200016,1443.4945,True,19,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.1,100000,not_applicable,,,3200016,1430.2457,True,20,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.1,100000,not_applicable,,,3200016,1453.5259,True,21,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.1,100000,not_applicable,,,3200016,1433.0632,True,22,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.1,100000,not_applicable,,,3200016,1427.3566,True,23,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.1,100000,not_applicable,,,3200016,1447.2627,True,24,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.1,100000,not_applicable,,,3200016,1453.5683,True,25,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.1,100000,not_applicable,,,3200016,1403.6874,True,26,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.1,100000,not_applicable,,,3200016,1418.645,True,27,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.1,100000,not_applicable,,,3200016,1442.3194,True,28,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.1,100000,not_applicable,,,3200016,1422.714,True,29,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.15,150000,not_applicable,,,4800016,2169.5096,True,0,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.15,150000,not_applicable,,,4800016,2208.4796,True,1,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.15,150000,not_applicable,,,4800016,2163.9528,True,2,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.15,150000,not_applicable,,,4800016,2208.513,True,3,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.15,150000,not_applicable,,,4800016,2177.4058,True,4,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.15,150000,not_applicable,,,4800016,2203.1339,True,5,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.15,150000,not_applicable,,,4800016,2165.4711,True,6,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.15,150000,not_applicable,,,4800016,2156.6004,True,7,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.15,150000,not_applicable,,,4800016,2090.0505,True,8,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.15,150000,not_applicable,,,4800016,2087.511,True,9,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.15,150000,not_applicable,,,4800016,2127.088,True,10,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.15,150000,not_applicable,,,4800016,2108.7631,True,11,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.15,150000,not_applicable,,,4800016,2108.9476,True,12,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.15,150000,not_applicable,,,4800016,2263.7481,True,13,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.15,150000,not_applicable,,,4800016,2422.5437,True,14,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.15,150000,not_applicable,,,4800016,2152.84,True,15,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.15,150000,not_applicable,,,4800016,2174.982,True,16,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.15,150000,not_applicable,,,4800016,2156.8636,True,17,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.15,150000,not_applicable,,,4800016,2139.1754,True,18,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.15,150000,not_applicable,,,4800016,2206.1812,True,19,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.15,150000,not_applicable,,,4800016,2132.9336,True,20,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.15,150000,not_applicable,,,4800016,2139.866,True,21,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.15,150000,not_applicable,,,4800016,2157.2518,True,22,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.15,150000,not_applicable,,,4800016,2141.8198,True,23,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.15,150000,not_applicable,,,4800016,2189.5785,True,24,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.15,150000,not_applicable,,,4800016,2154.2755,True,25,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.15,150000,not_applicable,,,4800016,2135.5142,True,26,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.15,150000,not_applicable,,,4800016,2120.2442,True,27,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.15,150000,not_applicable,,,4800016,2172.5042,True,28,epoch and bytes32 token blacklist,32.0
+zkRevoke,1000000,0.15,150000,not_applicable,,,4800016,2147.7759,True,29,epoch and bytes32 token blacklist,32.0

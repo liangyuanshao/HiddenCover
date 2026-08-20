@@ -1,0 +1,35 @@
+# Build outputs
+build/
+dist/
+target/
+out/
+
+# Language caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+node_modules/
+.venv/
+external/
+
+# Benchmark scratch artifacts (normalized CSV results are versioned)
+benchmarks/results/tmp/
+benchmarks/results/legacy_*/
+evaluation/figures/
+evaluation/tables/
+coverage/
+*.prof
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+
+# IDE and operating system
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db

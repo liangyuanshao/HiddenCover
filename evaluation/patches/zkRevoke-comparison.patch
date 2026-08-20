@@ -1,0 +1,195 @@
+diff --git a/cmd/hiddencover_compare/main.go b/cmd/hiddencover_compare/main.go
+new file mode 100644
+index 0000000..35694d5
+--- /dev/null
++++ b/cmd/hiddencover_compare/main.go
+@@ -0,0 +1,189 @@
++package main
++
++import (
++	"bytes"
++	"encoding/csv"
++	"fmt"
++	"os"
++	"path/filepath"
++	"strconv"
++	"time"
++
++	"go.uber.org/zap"
++
++	"zkrevoke/config"
++	"zkrevoke/holder"
++	"zkrevoke/issuer"
++	"zkrevoke/utils"
++	"zkrevoke/verifier"
++)
++
++const (
++	warmups      = 5
++	measurements = 30
++	capacity     = 1_000_000
++)
++
++func main() {
++	zap.ReplaceGlobals(zap.NewNop())
++	out := "comparison-results"
++	if len(os.Args) > 1 {
++		out = os.Args[1]
++	}
++	if err := os.MkdirAll(out, 0o755); err != nil {
++		panic(err)
++	}
++	if err := benchmarkState(filepath.Join(out, "rq2_zkrevoke.csv")); err != nil {
++		panic(err)
++	}
++	if err := benchmarkPresentation(filepath.Join(out, "rq3_zkrevoke.csv")); err != nil {
++		panic(err)
++	}
++}
++
++func benchmarkState(path string) error {
++	file, err := os.Create(path)
++	if err != nil {
++		return err
++	}
++	defer file.Close()
++	w := csv.NewWriter(file)
++	defer w.Flush()
++	if err := w.Write([]string{
++		"scheme", "capacity", "rate", "revoked", "measurement",
++		"public_state_bytes", "authority_refresh_ms", "token_bytes", "verified",
++	}); err != nil {
++		return err
++	}
++	for _, rate := range []float64{0.001, 0.01, 0.05, 0.10, 0.15} {
++		revoked := int(float64(capacity)*rate + 0.5)
++		for i := 0; i < warmups; i++ {
++			_ = makeBlacklist(revoked, i)
++		}
++		for measurement := 0; measurement < measurements; measurement++ {
++			start := time.Now()
++			tokens := makeBlacklist(revoked, measurement)
++			elapsed := float64(time.Since(start).Nanoseconds()) / 1e6
++			tokenBytes := 0
++			verified := true
++			if len(tokens) > 0 {
++				tokenBytes = len(tokens[0])
++				verified = tokenBytes == 32
++			}
++			row := []string{
++				"zkRevoke",
++				strconv.Itoa(capacity),
++				strconv.FormatFloat(rate, 'f', 3, 64),
++				strconv.Itoa(revoked),
++				strconv.Itoa(measurement),
++				strconv.Itoa(16 + revoked*tokenBytes),
++				strconv.FormatFloat(elapsed, 'f', 6, 64),
++				strconv.Itoa(tokenBytes),
++				strconv.FormatBool(verified),
++			}
++			if err := w.Write(row); err != nil {
++				return err
++			}
++		}
++	}
++	return w.Error()
++}
++
++func makeBlacklist(count, salt int) [][]byte {
++	tokens := make([][]byte, count)
++	for i := 0; i < count; i++ {
++		seed := fmt.Sprintf("comparison-revoked-%d-%d", salt, i)
++		tokens[i] = utils.ComputeToken(0, seed)
++	}
++	return tokens
++}
++
++func benchmarkPresentation(path string) error {
++	conf := config.Config{
++		UsePreGeneratedKeysAndVCs: false,
++		InitialTimestamp:          time.Now(),
++		Params: config.Params{
++			TotalVCs:                 capacity,
++			ExpirationPeriod:         365,
++			VerificationPeriod:       1,
++			NumberOfTokensPerCircuit: 1,
++			EpochDuration:            100000,
++		},
++	}
++	iss := issuer.NewIssuer(&conf)
++	h := holder.NewHolder(1)
++	vc, pki, duration, initialTimestamp, _ := iss.GenerateVC(h.Holder_PublicKey.Bytes())
++	h.InitCryptoKeys(pki)
++	h.SetDuration(duration)
++	h.SetInitialTimeStamp(initialTimestamp)
++	h.SetNumberOfTokensInCircuit(1)
++	h.ReceiveVC(*vc)
++
++	v := verifier.NewVerifier()
++	v.SetCCS(pki.Ccs)
++	v.SetEddsaPublicKey(pki.EddsaPublicKey)
++	v.SetZKPVerifyingKey(pki.ZkpVerifyingKey)
++	v.Duration = duration
++	v.InitialTimeStamp = initialTimestamp
++
++	blacklist := makeBlacklist(10_000, 0)
++	for i := 0; i < warmups; i++ {
++		challenge := v.RequestVP()
++		vp := h.GenerateVP(1, []byte(challenge))
++		if !v.VerifyVP(challenge, *vp) || contains(blacklist, vp.TokenPresentations[0].Tokens[0]) {
++			return fmt.Errorf("warmup verification failed")
++		}
++	}
++
++	file, err := os.Create(path)
++	if err != nil {
++		return err
++	}
++	defer file.Close()
++	w := csv.NewWriter(file)
++	defer w.Flush()
++	if err := w.Write([]string{
++		"scheme", "m", "k", "revoked", "measurement", "protocol_payload_bytes",
++		"json_wire_bytes", "proof_bytes", "show_ms", "verify_ms", "verified",
++	}); err != nil {
++		return err
++	}
++	for measurement := 0; measurement < measurements; measurement++ {
++		challenge := v.RequestVP()
++		start := time.Now()
++		vp := h.GenerateVP(1, []byte(challenge))
++		showMS := float64(time.Since(start).Nanoseconds()) / 1e6
++
++		start = time.Now()
++		verified := v.VerifyVP(challenge, *vp)
++		revoked := contains(blacklist, vp.TokenPresentations[0].Tokens[0])
++		verifyMS := float64(time.Since(start).Nanoseconds()) / 1e6
++		verified = verified && !revoked
++
++		block := vp.TokenPresentations[0]
++		proofBytes := len(block.ZKPProof.ProofValue)
++		protocolBytes := proofBytes + len(block.Tokens[0]) + 8 +
++			len(vp.Hash1) + len(vp.ClaimsHash) + 16
++		row := []string{
++			"zkRevoke", "1", "1", "10000", strconv.Itoa(measurement),
++			strconv.Itoa(protocolBytes), strconv.Itoa(len(vp.Json())),
++			strconv.Itoa(proofBytes),
++			strconv.FormatFloat(showMS, 'f', 6, 64),
++			strconv.FormatFloat(verifyMS, 'f', 6, 64),
++			strconv.FormatBool(verified),
++		}
++		if err := w.Write(row); err != nil {
++			return err
++		}
++	}
++	return w.Error()
++}
++
++func contains(tokens [][]byte, target []byte) bool {
++	for _, token := range tokens {
++		if bytes.Equal(token, target) {
++			return true
++		}
++	}
++	return false
++}

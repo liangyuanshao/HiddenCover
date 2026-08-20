@@ -1,0 +1,52 @@
+{
+  "row_counts": {
+    "rq1": 12810,
+    "rq2": 450,
+    "rq3": 330,
+    "rq4": 300,
+    "credential": 180
+  },
+  "rq1_at_1000": {
+    "allosaur_total_bytes_median": 16055.0,
+    "allosaur_holder_ms_median": 44.87229960419695,
+    "allosaur_server_ms_median": 328.47585000000004,
+    "hidden_random_state_bytes_median": 105536.0,
+    "hidden_random_sync_ms_median": 0.6399
+  },
+  "rq2_at_1pct": {
+    "hidden_state_bytes": {
+      "clustered": 768.0,
+      "random": 1944304.0,
+      "dispersed": 2202160.0
+    },
+    "hidden_refresh_ms": {
+      "clustered": 0.4062,
+      "random": 43.665800000000004,
+      "dispersed": 45.823
+    },
+    "zk_state_bytes": 320016.0,
+    "zk_refresh_ms": 148.59815
+  },
+  "rq3": {
+    "zk_payload_bytes": 284.0,
+    "zk_json_bytes": 1244.0,
+    "zk_show_ms": 52.73225,
+    "zk_verify_ms": 0.99935,
+    "hidden_64": {
+      "payload_bytes": 1306.0,
+      "show_ms": 60.534,
+      "verify_ms": 29.6301
+    },
+    "hidden_1024": {
+      "payload_bytes": 1626.0,
+      "show_ms": 1144.3843,
+      "verify_ms": 336.9729
+    },
+    "hidden_4096": {
+      "payload_bytes": 1786.0,
+      "show_ms": 5553.14995,
+      "verify_ms": 1429.59575,
+      "oom_share_pct": 86.73986733109044
+    }
+  }
+}

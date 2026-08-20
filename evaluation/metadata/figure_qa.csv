@@ -1,0 +1,5 @@
+figure,svg_text_editable,svg_bytes,pdf_exists,tiff_exists,png_exists
+rq1_holder_synchronization,True,75237,True,True,True
+rq2_public_state_transfer,True,84732,True,True,True
+rq3_current_state_presentation,True,44528,True,True,True
+rq4_hiddencover_bottleneck,True,34404,True,True,True

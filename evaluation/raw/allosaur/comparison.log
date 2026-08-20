@@ -1,0 +1,579 @@
+warning: unexpected `cfg` condition value: `std`
+  --> accumulator\src\utils.rs:55:15
+   |
+55 |     #[cfg(any(feature = "std", feature = "alloc"))]
+   |               ^^^^^^^^^^^^^^^ help: remove the condition
+   |
+   = note: no expected values for `feature`
+   = help: consider adding `std` as a feature in `Cargo.toml`
+   = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+   = note: `#[warn(unexpected_cfgs)]` on by default
+
+warning: unexpected `cfg` condition value: `alloc`
+  --> accumulator\src\utils.rs:55:32
+   |
+55 |     #[cfg(any(feature = "std", feature = "alloc"))]
+   |                                ^^^^^^^^^^^^^^^^^ help: remove the condition
+   |
+   = note: no expected values for `feature`
+   = help: consider adding `alloc` as a feature in `Cargo.toml`
+   = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+
+warning: unexpected `cfg` condition value: `std`
+  --> accumulator\src\utils.rs:61:19
+   |
+61 |     #[cfg(not(any(feature = "std", feature = "alloc")))]
+   |                   ^^^^^^^^^^^^^^^ help: remove the condition
+   |
+   = note: no expected values for `feature`
+   = help: consider adding `std` as a feature in `Cargo.toml`
+   = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+
+warning: unexpected `cfg` condition value: `alloc`
+  --> accumulator\src\utils.rs:61:36
+   |
+61 |     #[cfg(not(any(feature = "std", feature = "alloc")))]
+   |                                    ^^^^^^^^^^^^^^^^^ help: remove the condition
+   |
+   = note: no expected values for `feature`
+   = help: consider adding `alloc` as a feature in `Cargo.toml`
+   = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+
+warning: unexpected `cfg` condition value: `std`
+   --> accumulator\src\utils.rs:112:15
+    |
+112 |     #[cfg(any(feature = "std", feature = "alloc"))]
+    |               ^^^^^^^^^^^^^^^ help: remove the condition
+    |
+    = note: no expected values for `feature`
+    = help: consider adding `std` as a feature in `Cargo.toml`
+    = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+
+warning: unexpected `cfg` condition value: `alloc`
+   --> accumulator\src\utils.rs:112:32
+    |
+112 |     #[cfg(any(feature = "std", feature = "alloc"))]
+    |                                ^^^^^^^^^^^^^^^^^ help: remove the condition
+    |
+    = note: no expected values for `feature`
+    = help: consider adding `alloc` as a feature in `Cargo.toml`
+    = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+
+warning: unexpected `cfg` condition value: `std`
+   --> accumulator\src\utils.rs:118:19
+    |
+118 |     #[cfg(not(any(feature = "std", feature = "alloc")))]
+    |                   ^^^^^^^^^^^^^^^ help: remove the condition
+    |
+    = note: no expected values for `feature`
+    = help: consider adding `std` as a feature in `Cargo.toml`
+    = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+
+warning: unexpected `cfg` condition value: `alloc`
+   --> accumulator\src\utils.rs:118:36
+    |
+118 |     #[cfg(not(any(feature = "std", feature = "alloc")))]
+    |                                    ^^^^^^^^^^^^^^^^^ help: remove the condition
+    |
+    = note: no expected values for `feature`
+    = help: consider adding `alloc` as a feature in `Cargo.toml`
+    = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+
+warning: use of deprecated associated function `bls12_381_plus::Scalar::one`: Use ONE instead.
+  --> accumulator\src\accumulator.rs:65:22
+   |
+65 |         Self(Scalar::one())
+   |                      ^^^
+   |
+   = note: `#[warn(deprecated)]` on by default
+
+warning: use of deprecated associated function `bls12_381_plus::G1Projective::generator`: Use GENERATOR instead.
+   --> accumulator\src\accumulator.rs:180:28
+    |
+180 |         Self(G1Projective::generator())
+    |                            ^^^^^^^^^
+
+warning: use of deprecated associated function `bls12_381_plus::G1Projective::generator`: Use GENERATOR instead.
+   --> accumulator\src\accumulator.rs:199:28
+    |
+199 |         Self(G1Projective::generator() * y.0)
+    |                            ^^^^^^^^^
+
+warning: use of deprecated associated function `bls12_381_plus::Scalar::one`: Use ONE instead.
+  --> accumulator\src\key.rs:76:31
+   |
+76 |                 .fold(Scalar::one(), |a, y| a * y),
+   |                               ^^^
+
+warning: use of deprecated associated function `bls12_381_plus::Scalar::one`: Use ONE instead.
+  --> accumulator\src\key.rs:92:27
+   |
+92 |         let one = Scalar::one();
+   |                           ^^^
+
+warning: use of deprecated associated function `bls12_381_plus::G2Projective::generator`: Use GENERATOR instead.
+   --> accumulator\src\key.rs:172:28
+    |
+172 |         Self(G2Projective::generator() * sk.0)
+    |                            ^^^^^^^^^
+
+warning: use of deprecated associated function `bls12_381_plus::G2Projective::generator`: Use GENERATOR instead.
+   --> accumulator\src\proof.rs:152:32
+    |
+152 |         let g2 = G2Projective::generator();
+    |                                ^^^^^^^^^
+
+warning: use of deprecated associated function `bls12_381_plus::G2Projective::generator`: Use GENERATOR instead.
+   --> accumulator\src\proof.rs:289:32
+    |
+289 |         let g2 = G2Projective::generator();
+    |                                ^^^^^^^^^
+
+warning: use of deprecated associated function `bls12_381_plus::G1Projective::generator`: Use GENERATOR instead.
+   --> accumulator\src\proof.rs:506:29
+    |
+506 |             &[G1Projective::generator(), proof_params.k],
+    |                             ^^^^^^^^^
+
+warning: use of deprecated associated function `bls12_381_plus::G1Projective::generator`: Use GENERATOR instead.
+   --> accumulator\src\proof.rs:512:29
+    |
+512 |             &[G1Projective::generator(), proof_params.k],
+    |                             ^^^^^^^^^
+
+warning: use of deprecated associated function `bls12_381_plus::G1Projective::generator`: Use GENERATOR instead.
+   --> accumulator\src\proof.rs:522:45
+    |
+522 |         let cap_r_a = cap_r(&[G1Projective::generator(), proof_params.k], &[r_u, r_v]);
+    |                                             ^^^^^^^^^
+
+warning: use of deprecated associated function `bls12_381_plus::G2Projective::generator`: Use GENERATOR instead.
+   --> accumulator\src\proof.rs:528:32
+    |
+528 |         let g2 = G2Projective::generator();
+    |                                ^^^^^^^^^
+
+warning: use of deprecated associated function `bls12_381_plus::G2Projective::generator`: Use GENERATOR instead.
+   --> accumulator\src\proof.rs:690:32
+    |
+690 |         let g2 = G2Projective::generator();
+    |                                ^^^^^^^^^
+
+warning: use of deprecated associated function `bls12_381_plus::G1Projective::generator`: Use GENERATOR instead.
+   --> accumulator\src\proof.rs:734:32
+    |
+734 |         let g1 = G1Projective::generator();
+    |                                ^^^^^^^^^
+
+warning: use of deprecated associated function `bls12_381_plus::Scalar::one`: Use ONE instead.
+  --> accumulator\src\utils.rs:42:27
+   |
+42 |             .fold(Scalar::one(), |a, y| a * y)
+   |                           ^^^
+
+warning: use of deprecated associated function `bls12_381_plus::Scalar::zero`: Use ZERO instead.
+   --> accumulator\src\utils.rs:214:37
+    |
+214 |                 self.0[i] = Scalar::zero();
+    |                                     ^^^^
+
+warning: use of deprecated associated function `bls12_381_plus::Scalar::zero`: Use ZERO instead.
+   --> accumulator\src\utils.rs:218:68
+    |
+218 |                 .resize_with(self.0.len() + rhs.len() - 1, Scalar::zero);
+    |                                                                    ^^^^
+
+warning: use of deprecated associated function `bls12_381_plus::G2Projective::generator`: Use GENERATOR instead.
+  --> accumulator\src\witness.rs:73:35
+   |
+73 |         let mut p = G2Projective::generator();
+   |                                   ^^^^^^^^^
+
+warning: use of deprecated associated function `bls12_381_plus::G2Projective::generator`: Use GENERATOR instead.
+  --> accumulator\src\witness.rs:77:32
+   |
+77 |         let g2 = G2Projective::generator();
+   |                                ^^^^^^^^^
+
+warning: use of deprecated associated function `bls12_381_plus::Scalar::one`: Use ONE instead.
+   --> accumulator\src\witness.rs:253:28
+    |
+253 |             .fold((Scalar::one(), Scalar::one()), |mut a, y| {
+    |                            ^^^
+
+warning: use of deprecated associated function `bls12_381_plus::Scalar::one`: Use ONE instead.
+   --> accumulator\src\witness.rs:253:43
+    |
+253 |             .fold((Scalar::one(), Scalar::one()), |mut a, y| {
+    |                                           ^^^
+
+warning: use of deprecated associated function `bls12_381_plus::G1Projective::generator`: Use GENERATOR instead.
+   --> accumulator\src\witness.rs:262:35
+    |
+262 |         let mut c = G1Projective::generator();
+    |                                   ^^^^^^^^^
+
+warning: use of deprecated associated function `bls12_381_plus::G2Projective::generator`: Use GENERATOR instead.
+   --> accumulator\src\witness.rs:271:35
+    |
+271 |         let mut p = G2Projective::generator();
+    |                                   ^^^^^^^^^
+
+warning: use of deprecated associated function `bls12_381_plus::G1Projective::generator`: Use GENERATOR instead.
+   --> accumulator\src\witness.rs:275:36
+    |
+275 |         let mut pd = G1Projective::generator();
+    |                                    ^^^^^^^^^
+
+warning: use of deprecated associated function `bls12_381_plus::G2Projective::generator`: Use GENERATOR instead.
+   --> accumulator\src\witness.rs:278:33
+    |
+278 |         let g2 = -G2Projective::generator();
+    |                                 ^^^^^^^^^
+
+warning: use of deprecated associated function `bls12_381_plus::G2Projective::generator`: Use GENERATOR instead.
+   --> accumulator\src\witness.rs:285:49
+    |
+285 |                 &G2Prepared::from(G2Projective::generator().to_affine()),
+    |                                                 ^^^^^^^^^
+
+warning: use of deprecated associated function `bls12_381_plus::Scalar::one`: Use ONE instead.
+   --> accumulator\src\witness.rs:438:23
+    |
+438 |     let one = Scalar::one();
+    |                       ^^^
+
+warning: `accumulator` (lib) generated 35 warnings
+warning: use of deprecated associated function `bls12_381_plus::G1Projective::generator`: Use GENERATOR instead.
+  --> allosaur\src\utils.rs:51:31
+   |
+51 |             p1: G1Projective::generator(),
+   |                               ^^^^^^^^^
+   |
+   = note: `#[warn(deprecated)]` on by default
+
+warning: use of deprecated associated function `bls12_381_plus::G2Projective::generator`: Use GENERATOR instead.
+  --> allosaur\src\utils.rs:52:31
+   |
+52 |             p2: G2Projective::generator(),
+   |                               ^^^^^^^^^
+
+warning: use of deprecated associated function `bls12_381_plus::Scalar::one`: Use ONE instead.
+   --> allosaur\src\utils.rs:108:29
+    |
+108 |     let mut point = Scalar::one();
+    |                             ^^^
+
+warning: use of deprecated associated function `bls12_381_plus::Scalar::one`: Use ONE instead.
+   --> allosaur\src\utils.rs:111:33
+    |
+111 |         point = point + Scalar::one();
+    |                                 ^^^
+
+warning: use of deprecated associated function `bls12_381_plus::Scalar::one`: Use ONE instead.
+   --> allosaur\src\utils.rs:124:23
+    |
+124 |         .fold(Scalar::one(), |a, y| a * y.0);
+    |                       ^^^
+
+warning: use of deprecated associated function `bls12_381_plus::Scalar::zero`: Use ZERO instead.
+   --> allosaur\src\utils.rs:160:30
+    |
+160 |     let mut result = Scalar::zero();
+    |                              ^^^^
+
+warning: use of deprecated associated function `bls12_381_plus::G1Projective::identity`: Use IDENTITY instead.
+   --> allosaur\src\utils.rs:189:36
+    |
+189 |     let mut result = G1Projective::identity();
+    |                                    ^^^^^^^^
+
+warning: use of deprecated associated function `bls12_381_plus::Scalar::one`: Use ONE instead.
+   --> allosaur\src\servers.rs:179:27
+    |
+179 |         let m1 = -Scalar::one();
+    |                           ^^^
+
+warning: use of deprecated associated function `bls12_381_plus::Scalar::one`: Use ONE instead.
+   --> allosaur\src\servers.rs:185:33
+    |
+185 |             d_poly.push(Scalar::one());
+    |                                 ^^^
+
+warning: use of deprecated associated function `bls12_381_plus::Scalar::zero`: Use ZERO instead.
+   --> allosaur\src\servers.rs:200:49
+    |
+200 |             let mut v_poly_evals = vec![Scalar::zero(); v_polys.len()];
+    |                                                 ^^^^
+
+warning: use of deprecated associated function `bls12_381_plus::G1Projective::identity`: Use IDENTITY instead.
+   --> allosaur\src\servers.rs:209:45
+    |
+209 |             let mut v_point = G1Projective::identity();
+    |                                             ^^^^^^^^
+
+warning: use of deprecated associated function `bls12_381_plus::Scalar::one`: Use ONE instead.
+   --> allosaur\src\user.rs:208:34
+    |
+208 |         let mut d_test = Scalar::one();
+    |                                  ^^^
+
+warning: `allosaur` (lib) generated 12 warnings
+   Compiling allosaur-benchmarks v0.1.0 (<baseline-checkout>\allosaurust)
+warning: use of deprecated associated function `bls12_381_plus::G2Projective::generator`: Use GENERATOR instead.
+   --> benches\updates.rs:185:56
+    |
+185 |         let public_key_alpha = PublicKey(G2Projective::generator() * alpha.0);
+    |                                                        ^^^^^^^^^
+    |
+    = note: `#[warn(deprecated)]` on by default
+
+warning: use of deprecated associated function `bls12_381_plus::G2Projective::generator`: Use GENERATOR instead.
+   --> benches\updates.rs:186:52
+    |
+186 |         let public_key_s = PublicKey(G2Projective::generator() * s.0);
+    |                                                    ^^^^^^^^^
+
+warning: constant `SLICES` is never used
+  --> benches\updates.rs:20:7
+   |
+20 | const SLICES: usize = 50; // Size of each "slice" of the optimized single-server update
+   |       ^^^^^^
+   |
+   = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+
+warning: constant `BATCH_UPDATE_CHANGES` is never used
+  --> benches\updates.rs:23:7
+   |
+23 | const BATCH_UPDATE_CHANGES: [(usize, usize); 6] = [
+   |       ^^^^^^^^^^^^^^^^^^^^
+
+warning: function `single_server` is never used
+  --> benches\updates.rs:44:4
+   |
+44 | fn single_server(c: &mut Criterion) {
+   |    ^^^^^^^^^^^^^
+
+warning: function `batch_update` is never used
+   --> benches\updates.rs:114:4
+    |
+114 | fn batch_update(c: &mut Criterion) {
+    |    ^^^^^^^^^^^^
+
+warning: struct `VBUpdateMessage` is never constructed
+   --> benches\updates.rs:352:8
+    |
+352 | struct VBUpdateMessage {
+    |        ^^^^^^^^^^^^^^^
+
+warning: `allosaur-benchmarks` (bench "updates") generated 7 warnings
+    Finished `bench` profile [optimized] target(s) in 1.79s
+     Running benches\updates.rs (C:\codex_build\allosaurust_compare\release\deps\updates-5c329ed58512743e.exe)
+=================================================
+=ALLOSAUR Benchmark with 10 deletions and threshold 3 =
+=================================================
+Benchmarking ALLOSAUR user-side pre-update/10
+Benchmarking ALLOSAUR user-side pre-update/10: Warming up for 3.0000 s
+Benchmarking ALLOSAUR user-side pre-update/10: Collecting 30 samples in estimated 5.0012 s (450k iterations)
+Benchmarking ALLOSAUR user-side pre-update/10: Analyzing
+ALLOSAUR user-side pre-update/10
+                        time:   [10.828 µs 10.989 µs 11.143 µs]
+Found 1 outliers among 30 measurements (3.33%)
+  1 (3.33%) high severe
+
+ALLOSAUR user 1 user->server message size 820 bytes
+Benchmarking ALLOSAUR server-side update/10
+Benchmarking ALLOSAUR server-side update/10: Warming up for 3.0000 s
+Benchmarking ALLOSAUR server-side update/10: Collecting 30 samples in estimated 6.3580 s (1860 iterations)
+Benchmarking ALLOSAUR server-side update/10: Analyzing
+ALLOSAUR server-side update/10
+                        time:   [3.4804 ms 3.8383 ms 4.2902 ms]
+Found 5 outliers among 30 measurements (16.67%)
+  2 (6.67%) high mild
+  3 (10.00%) high severe
+
+COMPARISON_CSV,10,820,820
+Benchmarking user-side post-update/10
+Benchmarking user-side post-update/10: Warming up for 3.0000 s
+Benchmarking user-side post-update/10: Collecting 30 samples in estimated 6.6311 s (1395 iterations)
+Benchmarking user-side post-update/10: Analyzing
+user-side post-update/10
+                        time:   [4.6950 ms 4.7523 ms 4.8035 ms]
+
+=================================================
+=ALLOSAUR Benchmark with 30 deletions and threshold 3 =
+=================================================
+Benchmarking ALLOSAUR user-side pre-update/30
+Benchmarking ALLOSAUR user-side pre-update/30: Warming up for 3.0000 s
+Benchmarking ALLOSAUR user-side pre-update/30: Collecting 30 samples in estimated 5.0028 s (339k iterations)
+Benchmarking ALLOSAUR user-side pre-update/30: Analyzing
+ALLOSAUR user-side pre-update/30
+                        time:   [14.473 µs 14.853 µs 15.214 µs]
+
+ALLOSAUR user 1 user->server message size 1465 bytes
+Benchmarking ALLOSAUR server-side update/30
+Benchmarking ALLOSAUR server-side update/30: Warming up for 3.0000 s
+Benchmarking ALLOSAUR server-side update/30: Collecting 30 samples in estimated 9.1810 s (930 iterations)
+Benchmarking ALLOSAUR server-side update/30: Analyzing
+ALLOSAUR server-side update/30
+                        time:   [9.8152 ms 9.9446 ms 10.072 ms]
+
+COMPARISON_CSV,30,1465,1625
+Benchmarking user-side post-update/30
+Benchmarking user-side post-update/30: Warming up for 3.0000 s
+Benchmarking user-side post-update/30: Collecting 30 samples in estimated 8.6251 s (930 iterations)
+Benchmarking user-side post-update/30: Analyzing
+user-side post-update/30
+                        time:   [9.1822 ms 9.2617 ms 9.3511 ms]
+Found 2 outliers among 30 measurements (6.67%)
+  1 (3.33%) high mild
+  1 (3.33%) high severe
+
+=================================================
+=ALLOSAUR Benchmark with 100 deletions and threshold 3 =
+=================================================
+Benchmarking ALLOSAUR user-side pre-update/100
+Benchmarking ALLOSAUR user-side pre-update/100: Warming up for 3.0000 s
+Benchmarking ALLOSAUR user-side pre-update/100: Collecting 30 samples in estimated 5.0007 s (292k iterations)
+Benchmarking ALLOSAUR user-side pre-update/100: Analyzing
+ALLOSAUR user-side pre-update/100
+                        time:   [17.187 µs 17.589 µs 18.036 µs]
+
+ALLOSAUR user 1 user->server message size 2585 bytes
+Benchmarking ALLOSAUR server-side update/100
+Benchmarking ALLOSAUR server-side update/100: Warming up for 3.0000 s
+Benchmarking ALLOSAUR server-side update/100: Collecting 30 samples in estimated 5.8381 s (180 iterations)
+Benchmarking ALLOSAUR server-side update/100: Analyzing
+ALLOSAUR server-side update/100
+                        time:   [32.327 ms 32.800 ms 33.280 ms]
+
+COMPARISON_CSV,100,2585,2825
+Benchmarking user-side post-update/100
+Benchmarking user-side post-update/100: Warming up for 3.0000 s
+
+Warning: Unable to complete 30 samples in 5.0s. You may wish to increase target time to 7.4s, enable flat sampling, or reduce sample count to 10.
+Benchmarking user-side post-update/100: Collecting 30 samples in estimated 7.3773 s (465 iterations)
+Benchmarking user-side post-update/100: Analyzing
+user-side post-update/100
+                        time:   [16.122 ms 16.469 ms 16.859 ms]
+
+=================================================
+=ALLOSAUR Benchmark with 300 deletions and threshold 3 =
+=================================================
+Benchmarking ALLOSAUR user-side pre-update/300
+Benchmarking ALLOSAUR user-side pre-update/300: Warming up for 3.0000 s
+Benchmarking ALLOSAUR user-side pre-update/300: Collecting 30 samples in estimated 5.0072 s (169k iterations)
+Benchmarking ALLOSAUR user-side pre-update/300: Analyzing
+ALLOSAUR user-side pre-update/300
+                        time:   [28.376 µs 29.019 µs 29.581 µs]
+Found 1 outliers among 30 measurements (3.33%)
+  1 (3.33%) high severe
+
+ALLOSAUR user 1 user->server message size 4510 bytes
+Benchmarking ALLOSAUR server-side update/300
+Benchmarking ALLOSAUR server-side update/300: Warming up for 3.0000 s
+Benchmarking ALLOSAUR server-side update/300: Collecting 30 samples in estimated 5.9395 s (60 iterations)
+Benchmarking ALLOSAUR server-side update/300: Analyzing
+ALLOSAUR server-side update/300
+                        time:   [96.563 ms 97.905 ms 99.291 ms]
+
+COMPARISON_CSV,300,4510,4425
+Benchmarking user-side post-update/300
+Benchmarking user-side post-update/300: Warming up for 3.0000 s
+Benchmarking user-side post-update/300: Collecting 30 samples in estimated 5.4315 s (210 iterations)
+Benchmarking user-side post-update/300: Analyzing
+user-side post-update/300
+                        time:   [24.873 ms 25.318 ms 25.790 ms]
+
+=================================================
+=ALLOSAUR Benchmark with 1000 deletions and threshold 3 =
+=================================================
+Benchmarking ALLOSAUR user-side pre-update/1000
+Benchmarking ALLOSAUR user-side pre-update/1000: Warming up for 3.0000 s
+Benchmarking ALLOSAUR user-side pre-update/1000: Collecting 30 samples in estimated 5.0132 s (54k iterations)
+Benchmarking ALLOSAUR user-side pre-update/1000: Analyzing
+ALLOSAUR user-side pre-update/1000
+                        time:   [91.075 µs 92.782 µs 94.443 µs]
+
+Benchmarking ALLOSAUR server-side update/1000
+Benchmarking ALLOSAUR server-side update/1000: Warming up for 3.0000 s
+ALLOSAUR user 1 user->server message size 8030 bytes
+
+Warning: Unable to complete 30 samples in 5.0s. You may wish to increase target time to 9.9s, or reduce sample count to 10.
+Benchmarking ALLOSAUR server-side update/1000: Collecting 30 samples in estimated 9.9114 s (30 iterations)
+Benchmarking ALLOSAUR server-side update/1000: Analyzing
+ALLOSAUR server-side update/1000
+                        time:   [327.33 ms 331.58 ms 335.94 ms]
+
+COMPARISON_CSV,1000,8030,8025
+Benchmarking user-side post-update/1000
+Benchmarking user-side post-update/1000: Warming up for 3.0000 s
+Benchmarking user-side post-update/1000: Collecting 30 samples in estimated 5.4887 s (120 iterations)
+Benchmarking user-side post-update/1000: Analyzing
+user-side post-update/1000
+                        time:   [44.684 ms 45.341 ms 46.069 ms]
+Found 4 outliers among 30 measurements (13.33%)
+  4 (13.33%) high mild
+
+=================================================
+=ALLOSAUR Benchmark with 3000 deletions and threshold 3 =
+=================================================
+Benchmarking ALLOSAUR user-side pre-update/3000
+Benchmarking ALLOSAUR user-side pre-update/3000: Warming up for 3.0000 s
+Benchmarking ALLOSAUR user-side pre-update/3000: Collecting 30 samples in estimated 5.0187 s (55k iterations)
+Benchmarking ALLOSAUR user-side pre-update/3000: Analyzing
+ALLOSAUR user-side pre-update/3000
+                        time:   [87.821 µs 90.231 µs 92.658 µs]
+
+ALLOSAUR user 1 user->server message size 13950 bytes
+Benchmarking ALLOSAUR server-side update/3000
+Benchmarking ALLOSAUR server-side update/3000: Warming up for 3.0000 s
+
+Warning: Unable to complete 30 samples in 5.0s. You may wish to increase target time to 30.1s, or reduce sample count to 10.
+Benchmarking ALLOSAUR server-side update/3000: Collecting 30 samples in estimated 30.146 s (30 iterations)
+Benchmarking ALLOSAUR server-side update/3000: Analyzing
+ALLOSAUR server-side update/3000
+                        time:   [983.72 ms 992.95 ms 1.0024 s]
+Found 1 outliers among 30 measurements (3.33%)
+  1 (3.33%) high mild
+
+COMPARISON_CSV,3000,13950,14025
+Benchmarking user-side post-update/3000
+Benchmarking user-side post-update/3000: Warming up for 3.0000 s
+Benchmarking user-side post-update/3000: Collecting 30 samples in estimated 7.3827 s (90 iterations)
+Benchmarking user-side post-update/3000: Analyzing
+user-side post-update/3000
+                        time:   [79.594 ms 80.772 ms 82.020 ms]
+
+=================================================
+=ALLOSAUR Benchmark with 10000 deletions and threshold 3 =
+=================================================
+Benchmarking ALLOSAUR user-side pre-update/10000
+Benchmarking ALLOSAUR user-side pre-update/10000: Warming up for 3.0000 s
+Benchmarking ALLOSAUR user-side pre-update/10000: Collecting 30 samples in estimated 5.1164 s (17k iterations)
+Benchmarking ALLOSAUR user-side pre-update/10000: Analyzing
+ALLOSAUR user-side pre-update/10000
+                        time:   [291.85 µs 297.22 µs 302.54 µs]
+Found 1 outliers among 30 measurements (3.33%)
+  1 (3.33%) high mild
+
+ALLOSAUR user 1 user->server message size 25475 bytes
+Benchmarking ALLOSAUR server-side update/10000
+Benchmarking ALLOSAUR server-side update/10000: Warming up for 3.0000 s
+
+Warning: Unable to complete 30 samples in 5.0s. You may wish to increase target time to 100.8s, or reduce sample count to 10.
+Benchmarking ALLOSAUR server-side update/10000: Collecting 30 samples in estimated 100.78 s (30 iterations)
+Benchmarking ALLOSAUR server-side update/10000: Analyzing
+ALLOSAUR server-side update/10000
+                        time:   [3.3367 s 3.3521 s 3.3674 s]
+
+COMPARISON_CSV,10000,25475,25225
+Benchmarking user-side post-update/10000
+Benchmarking user-side post-update/10000: Warming up for 3.0000 s
+Benchmarking user-side post-update/10000: Collecting 30 samples in estimated 8.6529 s (60 iterations)
+Benchmarking user-side post-update/10000: Analyzing
+user-side post-update/10000
+                        time:   [142.25 ms 144.88 ms 147.92 ms]
+Found 1 outliers among 30 measurements (3.33%)
+  1 (3.33%) high mild
+

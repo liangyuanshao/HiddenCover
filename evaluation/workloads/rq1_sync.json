@@ -1,0 +1,14 @@
+{
+  "capacity": 16384,
+  "revocations": [10, 30, 100, 300, 1000, 3000, 10000],
+  "distributions": ["clustered", "random", "dispersed"],
+  "workload_seeds": 20,
+  "warmups_per_state": 5,
+  "measurements_per_state": 30,
+  "allosaur_shares": 5,
+  "allosaur_threshold": 3,
+  "zero_semantics": {
+    "HiddenCover.holder_upload_bytes": "no private holder update request",
+    "HiddenCover.server_per_holder_ms": "no individualized witness-update computation"
+  }
+}

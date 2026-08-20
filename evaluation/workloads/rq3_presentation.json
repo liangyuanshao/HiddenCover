@@ -1,0 +1,11 @@
+{
+  "HiddenCover_cover_nodes": [8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096],
+  "HiddenCover_state": "authenticated exact-size synthetic Cover containing one live credential path node",
+  "zkRevoke_m": 1,
+  "zkRevoke_k": 1,
+  "zkRevoke_current_blacklist_tokens": 10000,
+  "warmups": 5,
+  "measurements": 30,
+  "payload_rule": "mandatory binary protocol fields; application-dependent cleartext claims and JSON keys excluded",
+  "zkRevoke_json_wire_size_reported_separately": true
+}

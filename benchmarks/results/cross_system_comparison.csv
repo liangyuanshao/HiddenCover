@@ -1,0 +1,5 @@
+scheme,operation_scope,representative_workload,private_holder_update_bytes,proof_or_presentation_bytes,holder_or_prover_ms,verifier_or_server_ms,sample_count,measurement_type
+HiddenCover,complete current-state presentation,padded Cover m=1024,0.0,1626.0,1067.8231,280.4627,15.0,local median
+ALLOSAUR,private witness update,1000 deletions,16055.0,,43.726509077731656,316.117398,,local Criterion point estimate
+zkRevoke,single Groth16 proof component,"1 epoch, 1 token",0.0,164.0,50.285,1.506,4.0,local official workload; component only
+Curve Trees,private set-membership primitive,set size 2^40,,2900.0,2000.0,40.0,,paper-reported approximate value

@@ -1,0 +1,12 @@
+{
+  "HiddenCover_capacity": 1048576,
+  "zkRevoke_capacity": 1000000,
+  "revocation_rates": [0.001, 0.01, 0.05, 0.1, 0.15],
+  "HiddenCover_distributions": ["clustered", "random", "dispersed"],
+  "HiddenCover_workload_seeds": 20,
+  "zkRevoke_warmups": 5,
+  "zkRevoke_measurements": 30,
+  "HiddenCover_state_encoding": "112 + 32 * cover_nodes bytes",
+  "zkRevoke_state_encoding": "16 + 32 * revoked_tokens bytes",
+  "blockchain_publication_excluded": true
+}

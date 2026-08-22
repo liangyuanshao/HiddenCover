@@ -1,45 +1,90 @@
-# HiddenCover
+# HiddenCover Artifact
 
-HiddenCover 是一个无状态匿名凭证撤销研究原型。实现采用 Rust、BLS12-381、BBS 多消息签名和共享响应证明；Cover 侧使用移植到同一标量域的 Groth--Kohlweiss 型 One-out-of-Many 证明。本仓库仅包含协议代码、测试、基准程序、对比补丁和实验数据，尚未经过生产级安全审计。
+This repository contains the research prototype and reproducibility package for
+HiddenCover, a privacy-preserving anonymous-credential revocation mechanism.
+The prototype is implemented in Rust over BLS12-381. It combines BBS
+multi-message signatures, Pedersen commitments, and a Groth--Kohlweiss-style
+one-out-of-many proof instantiated over a common scalar field.
 
-## 已实现模块
+This is research software. It has not undergone a production security audit and
+must not be used to protect real credentials.
 
-- `src/tree.rs`：完全二叉树、叶分配和 Complete Subtree Cover。
-- `src/credential.rs`：逐路径 BBS 签名及隐藏签名持有证明。
-- `src/oom.rs`：同域 One-out-of-Many 证明。
-- `src/protocol.rs`：Setup、Issue、Revoke、Show、Verify 与状态签名。
-- `src/lib.rs`：合法展示、撤销拒绝、旧状态、重放、承诺/Cover 篡改和填充攻击测试。
-- `src/bin/benchmark.rs`：状态同步、公共状态、完整展示、瓶颈分解与凭证开销基准。
-- `evaluation/`：基线版本、comparison patch、工作负载、原始/归一化数据和 QA 元数据。
-- `scripts/analyze_and_plot.py`：跨方案归一化、数值断言和评估图表生成。
+## Artifact contents
 
-## 实现约束
+- `src/tree.rs`: complete binary tree, leaf allocation, and Complete Subtree cover.
+- `src/credential.rs`: per-path BBS signatures and hidden signature-possession proof.
+- `src/oom.rs`: one-out-of-many proof over the shared scalar field.
+- `src/protocol.rs`: `Setup`, `Issue`, `Revoke`, `Show`, `Verify`, and signed state.
+- `src/lib.rs`: correctness and adversarial tests, including revoked credentials,
+  stale state, replay, bridge-commitment tampering, cover tampering, and padding.
+- `src/bin/benchmark.rs`: holder synchronization, public state, presentation,
+  bottleneck, and credential-overhead benchmarks.
+- `benchmarks/results/`: raw HiddenCover benchmark outputs used by the paper.
+- `evaluation/`: baseline provenance, comparison patches, workloads, raw and
+  normalized data, and numerical QA metadata.
+- `scripts/analyze_and_plot.py`: normalization, assertions, tables, and figures.
 
-1. BBS 签名知识证明中节点消息的 Schnorr 盲化量和响应与 Pedersen 承诺证明共享，从而证明两侧隐藏的是同一节点值；
-2. 固定序列化格式、域分离标签和安全参数；
-3. 当前状态通过纯内存公告板提供，可进一步接入区块链或透明日志适配器；
-4. 测试向量检查两个证明确实绑定同一 `B`、`t`、`D_t` 与 `nonce`。
+The protocol implementation binds the credential-side hidden path node to the
+cover-side membership proof through one Pedersen commitment. The transcript also
+binds the state version, state digest, and verifier nonce.
 
-Groth--Kohlweiss 部分依据 MIT 许可的 `one-of-many-proofs` 原型结构改写，并统一使用 BLS12-381/Arkworks 标量域。
+## Requirements
 
-## 对比基线
+- Rust 1.97.0 and Cargo (the artifact was tested with the GNU Windows target).
+- Python 3.12 or later.
+- Python packages listed in `requirements.txt`.
+- For the cross-system reproduction only: Go 1.26 or later and the two baseline
+  repositories listed in `evaluation/README.md`.
 
-- [ALLOSAUR](https://github.com/sam-jaques/allosaurust)，固定于提交 `5bf8724963529f6ca947316466ce38c0104a3dcf`。本仓库复现其持有者撤销同步和服务器更新的可比片段；修改记录见 `evaluation/patches/allosaur-comparison.patch`。
-- [zkRevoke](https://github.com/praveensankar/zkRevoke)，固定于提交 `852f85846e98dd199289eeaa7943e19956a2649f`。本仓库复现其撤销公共状态和当前状态证明的可比片段；修改记录见 `evaluation/patches/zkRevoke-comparison.patch`。
+The checked-in `Cargo.lock` pins Rust dependencies. No network service, API key,
+private dataset, or blockchain node is required for the HiddenCover tests and
+benchmarks.
 
-这些结果是按协议语义对齐的组件级比较，不把不同方案中缺失的步骤记作实测零开销，也不宣称完整部署的端到端等价。
+## Quick reproduction
 
-## 复现
+From the repository root, run:
 
-Windows 下建议使用 Rust stable GNU 工具链和独立的 ASCII 构建目录：
-
-```powershell
-$env:CARGO_TARGET_DIR='C:\codex_build\hiddencover'
-$env:RUSTFLAGS='-C target-cpu=native'
-cargo +stable-x86_64-pc-windows-gnu test --lib
-cargo +stable-x86_64-pc-windows-gnu run --release --bin benchmark -- benchmarks/results all
-python -m pip install matplotlib numpy pandas
+```bash
+cargo test --locked --lib
+cargo run --locked --release --bin benchmark -- benchmarks/results all
+python -m pip install -r requirements.txt
 python scripts/analyze_and_plot.py
 ```
 
-HiddenCover 原始输出位于 `benchmarks/results/`，统一数据与复现元数据位于 `evaluation/`。绘图脚本默认使用仓库中已保存的 ALLOSAUR 原始样本；如需从 Criterion 输出重新归一化，可将环境变量 `HIDDENCOVER_ALLO_CRITERION` 指向 Criterion 结果目录。`external/` 仅用于本地检出基线仓库，不纳入版本控制。
+On Windows, an ASCII-only build directory can avoid toolchain issues with long
+or non-ASCII paths:
+
+```powershell
+$env:CARGO_TARGET_DIR='C:\artifact-build\hiddencover'
+$env:RUSTFLAGS='-C target-cpu=native'
+cargo +stable-x86_64-pc-windows-gnu test --locked --lib
+cargo +stable-x86_64-pc-windows-gnu run --locked --release --bin benchmark -- benchmarks/results all
+python -m pip install -r requirements.txt
+python scripts/analyze_and_plot.py
+```
+
+The test command must finish with all tests passing. The benchmark command writes
+CSV files under `benchmarks/results/`. The analysis script validates row counts
+and proof-success flags, then exports normalized CSV files, tables, and figures
+under `evaluation/`. See `evaluation/README.md` for the full RQ1--RQ4 workflow
+and baseline-specific commands.
+
+## Baseline provenance and comparison boundary
+
+The artifact compares protocol components whose semantics can be aligned:
+
+- ALLOSAUR, commit `5bf8724963529f6ca947316466ce38c0104a3dcf`.
+- zkRevoke, commit `852f85846e98dd199289eeaa7943e19956a2649f`.
+
+The corresponding modifications are recorded as patch files under
+`evaluation/patches/`. External repositories are intentionally excluded from
+this repository. Missing or non-comparable operations are represented as `NA`,
+not as measured zero cost. The evaluation does not claim end-to-end equivalence
+across deployments and excludes network latency, blockchain confirmation delay,
+contract gas, and full multi-manager deployment latency.
+
+## License
+
+The artifact is released under the MIT License. The adapted one-out-of-many
+structure follows the MIT-licensed `one-of-many-proofs` prototype; third-party
+baseline repositories remain subject to their own licenses.
